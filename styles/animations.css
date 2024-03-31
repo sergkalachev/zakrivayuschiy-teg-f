@@ -12,3 +12,112 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+.theme-menu__button:disabled::before {
+    content: "▶";
+    position: absolute;
+    top: 2px;
+    left: -20px;
+    animation: move ease-in-out 0.5s infinite alternate-reverse;
+    opacity: 0.6;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(4px);
+    }
+}
+
+.like-icon .core {
+    fill: transparent;
+    transition: fill 0.3s linear;
+    transition-delay: 0.03s;
+}
+
+.like-icon .main-body {
+    fill: transparent;
+    transition: fill 0.3s linear;
+}
+
+.like-icon .contour {
+    fill: var(--accent-color);
+    transition: fill 0.1s linear;
+}
+
+.like-icon:hover .core {
+    fill: var(--accent-color);
+    transition: fill 0.3s linear;
+  }
+
+.like-icon:hover .main-body {
+    fill: var(--accent-color);
+    transition: fill 0.3s linear;
+    transition-delay: 0.05s;
+  }
+
+.like-icon:active .main-body {
+    transition: fill 0.3s 0.05s linear;
+    fill: var(--like-color);
+}
+
+.like-icon:active .core {
+    transition: fill 0.3s linear;
+    fill: var(--like-color);
+}
+
+.like-icon.is-liked .core {
+    fill: var(--like-color);
+    animation: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+    fill: var(--like-color);
+    animation: fill 0.3s 00.5s linear;
+}
+
+.like-icon.is-liked .contour {
+    fill: var(--like-color);
+    animation: fill 0.3s 00.6s linear;
+}
+
+.like-icon.is-liked .heart {
+    animation: like 0.3s linear 0.1s 1;
+    transform-origin: center;
+    animation-direction: alternate;
+}
+
+.like-icon.is-liked .sparks {
+    animation: sparks-boom 0.3s linear 0.3s 1;
+    animation-direction: alternate;
+}
+
+@keyframes like {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes sparks-boom {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

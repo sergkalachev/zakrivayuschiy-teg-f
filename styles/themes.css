@@ -4,3 +4,63 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-dark {
+    --button-fill-color: var(--accent-color);
+    --main-color: #000;
+    --accent-color: #00CC14;
+    --background-gradient:
+        repeating-linear-gradient(var(--main-color), transparent 2px),
+        repeating-linear-gradient(90deg, var(--main-color), transparent 2px),
+        linear-gradient(#007f0c, #004306);
+        fill: var(--accent-color);
+    --content-title-font-weight: 785;
+    --content-text-font-weight: 465;
+
+}
+
+:root.theme-light {
+    --button-fill-color: var(--main-color);
+    --main-color: #fff;
+    --accent-color: #000;
+    --label-stroke-color:var(--main-color);
+    --background-gradient:
+        repeating-linear-gradient(#d3d3d3, transparent 2px),
+        repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
+        linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+        fill: var(--accent-color);
+    --content-title-font-weight: 700;
+    --content-text-font-weight: 400;
+}
+
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --button-fill-color: var(--main-color);
+        --main-color: #fff;
+        --accent-color: #000;
+        --label-stroke-color:var(--main-color);
+        --background-gradient:
+                repeating-linear-gradient(#d3d3d3, transparent 2px),
+                repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
+                linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+        fill: var(--accent-color);
+        --content-title-font-weight: 700;
+        --content-text-font-weight: 400;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --button-fill-color: var(--accent-color);
+        --main-color: #000;
+        --accent-color: #00CC14;
+        --background-gradient:
+                repeating-linear-gradient(var(--main-color), transparent 2px),
+                repeating-linear-gradient(90deg, var(--main-color), transparent 2px),
+                linear-gradient(#007f0c, #004306);
+        fill: var(--accent-color);
+        --content-title-font-weight: 785;
+        --content-text-font-weight: 465;
+    }
+}
