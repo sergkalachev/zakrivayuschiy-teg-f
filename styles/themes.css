@@ -10,13 +10,12 @@
     --main-color: #000;
     --accent-color: #00CC14;
     --background-gradient:
-        repeating-linear-gradient(var(--main-color), transparent 2px),
-        repeating-linear-gradient(90deg, var(--main-color), transparent 2px),
+        repeating-linear-gradient(var(--main-color) 0 2px, transparent 2px 4px),
+        repeating-linear-gradient(90deg, var(--main-color) 0 2px, transparent 2px 4px),
         linear-gradient(#007f0c, #004306);
         fill: var(--accent-color);
     --content-title-font-weight: 785;
     --content-text-font-weight: 465;
-
 }
 
 :root.theme-light {
@@ -25,8 +24,8 @@
     --accent-color: #000;
     --label-stroke-color:var(--main-color);
     --background-gradient:
-        repeating-linear-gradient(#d3d3d3, transparent 2px),
-        repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
+        repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
+        repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
         linear-gradient(#e7e7e7 0.01%, #1a1a1a);
         fill: var(--accent-color);
     --content-title-font-weight: 700;
@@ -41,8 +40,8 @@
         --accent-color: #000;
         --label-stroke-color:var(--main-color);
         --background-gradient:
-                repeating-linear-gradient(#d3d3d3, transparent 2px),
-                repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
+                repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
+                repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
                 linear-gradient(#e7e7e7 0.01%, #1a1a1a);
         fill: var(--accent-color);
         --content-title-font-weight: 700;
@@ -56,8 +55,8 @@
         --main-color: #000;
         --accent-color: #00CC14;
         --background-gradient:
-                repeating-linear-gradient(var(--main-color), transparent 2px),
-                repeating-linear-gradient(90deg, var(--main-color), transparent 2px),
+                repeating-linear-gradient(var(--main-color) 0 2px, transparent 2px 4px),
+                repeating-linear-gradient(90deg, var(--main-color) 0 2px, transparent 2px 4px),
                 linear-gradient(#007f0c, #004306);
         fill: var(--accent-color);
         --content-title-font-weight: 785;

@@ -23,7 +23,7 @@
   background-size: cover;
   color: var(--accent-color);
   font-family: var(--main-font, sans-serif);
-  font-variation-settings: "wght" var(--font-weight-normal, 400);
+  font-variation-settings: "wght" var(--content-text-font-weight);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,6 +74,7 @@
   background-color: transparent;
   border: none;
   font-size: 14px;
+  height: 14px;
   position: relative;
   padding: 0;
   transition: var(--transition-button);
@@ -97,6 +98,7 @@
   height: 2px;
   background-color: var(--accent-color);
   transition: transform 0.5s;
+  
 }
 
 .theme-menu__button:focus-visible::after {
@@ -158,15 +160,14 @@
 .post-title {
   line-height: 19px;
   font-size: 18px;
-  font-variation-settings: "wght" var(--font-weight-bold);
+  font-variation-settings: "wght" var(--content-title-font-weight);
   padding: 6px 10px;
   border-block-end: 2px solid var(--accent-color);
 }
 
 .post-img-section {
   position: relative;
-  border-top: 2px solid var(--accent-color);
-  border-bottom: 2px solid var(--accent-color);
+  border-block-end: 2px solid var(--accent-color);
   overflow: hidden;
 }
 
@@ -195,7 +196,7 @@
   opacity: 50%;
   font-size: 14px;
   line-height: 22px;
-  font-weight: 400;
+  
   color: var(--accent-color);
   text-shadow: 2px 0 0 var(--main-color);
   z-index: 2;
@@ -215,7 +216,6 @@
 .content__text {
   font-size: 18px;
   line-height: 21px;
-  font-variation-settings: "wght" var(--content-text-font-weight);
 }
 
 .like-button__container {
@@ -301,7 +301,6 @@ dialog::backdrop {
 .dialog-title {
   line-height: 21px;
   font-size: 14px;
-  font-weight: 400;
   text-transform: uppercase;
 }
 
